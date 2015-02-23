@@ -36,3 +36,4 @@ gem 'twitter'
 gem 'omniauth-twitter'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'responders'
+gem 'active_model_serializers'
