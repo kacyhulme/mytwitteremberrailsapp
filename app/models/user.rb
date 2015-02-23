@@ -18,8 +18,8 @@ class User < ActiveRecord::Base
   def twitter
     if provider == "twitter"
       @twitter ||= Twitter::REST::Client.new do |config|
-        config.consumer_key        = "M4SjEcLHIpTY1CvaQGMTPq6aG"
-        config.consumer_secret     = "t7DUxNL8Kr6u8jsRzv9oGrBkd0VK7mLwDyennsB7wrpUWE2gex"
+        config.consumer_key        = ENV["CONSUMER_KEY"]
+        config.consumer_secret     = ENV["CONSUMER_SECRET"]
         config.access_token        = oauth_token
         config.access_token_secret = oauth_secret
       end
