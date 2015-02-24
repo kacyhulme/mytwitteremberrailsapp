@@ -3,6 +3,17 @@ class Api::TweetsController < ApplicationController
 
   def index
     @tweets = current_user.twitter.user_timeline.take(40)
-    render json: {tweets: @tweets.map { |tweet| {id: tweet.id, text: tweet.text, retweet_count: tweet.retweet_count, user_name: tweet.user.name, location: tweet.user.location} }}
+    render json: {tweets: @tweets.map { |tweet| {
+                                          id: tweet.id,
+                                          text: tweet.text,
+                                          retweet_count: tweet.retweet_count,
+                                          user_name: tweet.user.name,
+                                          location: tweet.user.location,
+                                          description: tweet.user.description,
+                                          followers_count: tweet.user.followers_count,
+                                          friends_count: tweet.user.friends_count
+                                        }
+                  }
+                 }
   end
 end
