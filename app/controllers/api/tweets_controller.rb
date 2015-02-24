@@ -1,4 +1,4 @@
-class TweetsController < ApplicationController
+class Api::TweetsController < ApplicationController
   respond_to :json, :html
 
   def index

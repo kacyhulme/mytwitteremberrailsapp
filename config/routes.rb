@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :tweets
+  namespace :api do
+    resources :tweets
+  end
 
-  root 'home#index'
+  root 'application#index'
   get 'auth/:provider/callback' => 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout' => 'sessions#destroy', as: 'signout'
+
+  get "/*path" => "application#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
