@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   respond_to :json, :html
 
   def index
-    @tweet = current_user.twitter.search("rails", result_type: "recent").first
-    respond_with tweets: [{text: @tweet.text, user: current_user.name, id: 1}]
+    @tweets = current_user.twitter.user_timeline.take(40)
+    render json: {tweets: @tweets.map { |tweet| {id: tweet.id, text: tweet.text, retweet_count: tweet.retweet_count, user_name: tweet.user.name, location: tweet.user.location} }}
   end
 end
