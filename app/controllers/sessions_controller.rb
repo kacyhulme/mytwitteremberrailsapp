@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(env['omniauth.auth'])
     session[:user_id] = user.id
     # redirect_to root_url, notice: "Signed in!"
-    redirect_to "http://localhost:4200/landing"
+    redirect_to "/landing"
   end
 
   def destroy
