@@ -1,0 +1,13 @@
+<h2>Your Tweets</h2>
+xxxLatest Tweets from your feed:
+{{#each}}
+  <p>TWEET: {{text}}</p>
+  <p>FAV: {{favorited}}</p>
+  <p>LANG: {{lang}}</p>
+  <p>COUNT: {{retweetCount}}</p>
+  <p>FAVCOUNT: {{favoriteCount}}</p>
+  <p> LOC: {{location}}</p>
+  <p> USER: {{userName}}</p>
+{{/each}}
+
+{{outlet}}
