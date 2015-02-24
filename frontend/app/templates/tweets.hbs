@@ -3,6 +3,8 @@
 {{tweeter}}
 {{#each}}
   <p>Tweet: {{{text}}}</p>
+  <p>{{id}}</p>
+  <p>{{#link-to 'tweet' this}}Link to tweet{{/link-to}}</p>
 {{/each}}
 
 {{outlet}}
