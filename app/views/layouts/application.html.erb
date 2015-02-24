@@ -11,6 +11,7 @@
       <% if current_user %>
         Signed in as <%= current_user.name %>!
         <%= link_to "Sign Out", signout_path %>
+        <%= link_to "See Your Tweets", "http://localhost:3000/tweets"%>
       <% else %>
         <%= link_to "Sign in with Twitter", "/auth/twitter" %>
       <% end %>
