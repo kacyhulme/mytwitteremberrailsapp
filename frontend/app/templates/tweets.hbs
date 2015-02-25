@@ -1,8 +1,10 @@
-<h2>Latest Tweets Your From Your Feed</h2>
+<h2>Latest Tweets From Your Feed</h2>
 
+{{#link-to 'tweet' 1}}More Details{{/link-to}}</p>
+
+Tweets:
 {{#each}}
-  <p>Tweet: {{{text}}}</p>
-  <p>{{#link-to 'tweet' this}}Get the Details{{/link-to}}</p>
+  <p>{{{text}}}</p>
 {{/each}}
 
 {{outlet}}

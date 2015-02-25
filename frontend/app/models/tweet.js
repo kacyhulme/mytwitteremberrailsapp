@@ -11,4 +11,3 @@ var Tweet = DS.Model.extend({
 });
 
 export default Tweet;
-//id, text, retweet_count, user_name, location, description, followers_count, friends_count
