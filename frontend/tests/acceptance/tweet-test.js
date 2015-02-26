@@ -20,11 +20,16 @@ describe('Acceptance: Tweet', function() {
     Ember.run(App, 'destroy');
   });
 
-  it('can visit /tweet', function() {
-    visit('/tweet');
+  describe("visiting /tweets", function() {
+    beforeEach(function() {
+      visit('/tweets');
+    });
 
-    andThen(function() {
-      expect(currentPath()).to.equal('tweet');
+    it('can visit /tweet', function() {
+      andThen(function() {
+        expect(currentPath()).to.equal('tweets');
+        expect($("body").text()).to.include("coolest");
+      });
     });
   });
 });
