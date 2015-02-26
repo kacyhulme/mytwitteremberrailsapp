@@ -2,9 +2,10 @@
 
 {{#link-to 'tweet' 1}}More Details{{/link-to}}</p>
 
-Tweets:
 {{#each}}
-  <p>{{{text}}}</p>
+  <ul>
+    <li>{{{text}}}</li>
+  </ul>
 {{/each}}
 
 {{outlet}}

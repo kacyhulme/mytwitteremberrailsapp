@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+layout {
+  font-family: Georgia, "Cambria", serif;
+}
+
+a:link {
+    text-decoration: none;
+}
+.outer-div {
+  margin: 20px;
+  font-family: Georgia, "Cambria", serif;
+}
+
+button {
+  color: white:
+  border-radius: 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: lightblue;
+}
+
+li {
+  list-style-type: circle;
+}
