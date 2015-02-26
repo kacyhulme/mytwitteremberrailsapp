@@ -13,7 +13,7 @@
         <button><%= link_to "Sign Out", signout_path %></button>
         <button><%= link_to "See Your Tweets", "http://localhost:3000/tweets"%></button>
       <% else %>
-        <button><%= link_to "Sign in with Twitter", "/auth/twitter" %></button>
+        <button class="spec-sign-in-button"><%= link_to "Sign in with Twitter", "/auth/twitter" %></button>
       <% end %>
     </div>
     <%= yield %>
