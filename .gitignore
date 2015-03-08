@@ -12,3 +12,14 @@
 !/log/.keep
 /tmp
 .env
+
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+npm-debug.log
+
+
