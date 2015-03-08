@@ -35,3 +35,4 @@ gem 'omniauth-twitter'
 gem 'responders'
 gem 'active_model_serializers'
 gem "ember-cli-rails"
+gem "rails_12factor", group: :production
