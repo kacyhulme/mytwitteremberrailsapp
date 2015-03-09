@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :tweets
+    resources :timelines
   end
 
   root 'application#index'

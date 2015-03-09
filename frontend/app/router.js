@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('landing');
   this.resource('tweets');
   this.resource('tweet', { path: '/tweet/:tweet_id' });
+  this.resource('timelines');
 });
 
 export default Router;
